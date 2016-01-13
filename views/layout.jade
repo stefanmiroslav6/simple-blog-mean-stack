@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(type='text/javascript', src='/bower_components/angular/angular.js')
+		script(type='text/javascript', src='/bower_components/angular-ui-router/release/angular-ui-router.js')
+		script(type='text/javascript', src='/javascripts/angular-app.js')
+	body(ng-app='simpleBlog')
+		header
+			div(class='container')
+				h2 Simple Blog
+				h6 Built by Stefan Miroslav
+		div(id='content', class='container')
+			ui-view

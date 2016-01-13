@@ -1,0 +1,25 @@
+<div class="table-responsive" ng-init="init()">
+	<h2>Posts</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Content</th>
+				<th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="post in posts">
+				<td><a href='#/posts/{{$index}}/'>{{post.title}}</a></td>
+				<td>{{post.body}}</td>
+				<td>
+					<a class='btn btn-info' href='#/posts/{{$index}}/edit'>Edit</a>
+					<a class='btn btn-danger' ng-click='deletePost($index)'>Delete</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href='#/posts/new' class='btn btn-primary' ng-disabled="!dataReady">New Post</a>
+</div>

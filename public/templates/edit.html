@@ -1,0 +1,14 @@
+<form method="post" ng-submit='updatePost()'>
+	<div class='form-group'>
+		<label for='post_title'>Title</label>
+		<input class='form-control' type='text' name='post_title' id='post_title' ng-model='post.title' ng-disabled="!dataReady" />
+	</div>
+	<div class='form-group'>
+		<label for='post_body'>Content</label>
+		<textarea class='form-control' name='post_body' id='post_body' ng-model='post.body' ng-disabled="!dataReady"></textarea>
+	</div>
+	<div>
+		<input type='submit' id='submit' value='{{submit_caption}}' class='btn btn-primary' ng-disabled="!dataReady" />
+		<a href="#/posts" class="btn btn-info">Back</a>
+	</div>
+</form>
