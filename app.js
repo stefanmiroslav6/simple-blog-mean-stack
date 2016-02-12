@@ -15,6 +15,7 @@ var users = require('./routes/users');
 
 var app = express();
 
+// For deployment to hosting servers
 var port = process.env.PORT || 3000; 
 
 // view engine setup
